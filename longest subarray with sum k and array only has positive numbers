@@ -7,7 +7,7 @@ class Solution {
  int left=0,right=0;
  int n=arr.length;
  while(right<n){
-     if(sum>k &&left<=right){
+     while(sum>k &&left<=right){
          //trim from the lft
          sum-=arr[left];
          left++;
