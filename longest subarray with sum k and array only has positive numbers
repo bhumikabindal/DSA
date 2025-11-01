@@ -1,0 +1,27 @@
+class Solution {
+    public int longestSubarray(int[] arr, int k) {
+  //move and add and trim the left element if sum>k
+  
+  long sum=arr[0];
+  int maxlen=0;
+ int left=0,right=0;
+ int n=arr.length;
+ while(right<n){
+     if(sum>k &&left<=right){
+         //trim from the lft
+         sum-=arr[left];
+         left++;
+         
+         
+     }
+     if(sum==k){
+         maxlen=Math.max(maxlen,right-left+1);
+     }
+     right++;
+     if(right<n){
+         sum+=arr[right];
+         
+     }
+ }
+   return maxlen; }
+}
