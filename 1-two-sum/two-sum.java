@@ -8,7 +8,7 @@ class Solution {
         for (int i = 0; i < nums.length; i++) {
             int rem = target - nums[i];
             if (mpp.containsKey(rem) ) {
-                return new int[]{i, mpp.get(rem)};
+                return new int[]{i,mpp.get(rem)};
             }
             mpp.put(nums[i],i);
         }
